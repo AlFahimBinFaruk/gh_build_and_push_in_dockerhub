@@ -61,7 +61,7 @@ runs:
   - name: Push docker image
     shell: bash
     id: push
-    if: steps.login.outputs.result=='success' && steps.build.output.result=='success'
+    if: steps.login.outputs.result=='success' && steps.build.outputs.result=='success'
     run: |
       if docker push ${{ inputs.dockerhub-username }}/${{ inputs.image-name }}:${{ inputs.image-tag }}; then
         echo "Push successful"
