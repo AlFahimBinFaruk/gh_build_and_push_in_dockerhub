@@ -27,7 +27,7 @@ inputs:
 outputs:
   result:
     description: "Result of action: success or fail"
-    value: ${{ steps.final_result.ouputs.result }}
+    value: ${{ steps.final_result.outputs.result }}
 
 
 runs:
